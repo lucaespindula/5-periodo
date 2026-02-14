@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary.csproj", "{80D8944C-BFDA-4506-9697-B09F5A5F37EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppConsole", "..\AppConsole\AppConsole.csproj", "{5628452A-6CA3-2AE0-6411-828E02CA55CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaFinanceira", "..\BibliotecaFinanceira\BibliotecaFinanceira.csproj", "{39078F01-2E49-463C-8436-3A833424D5C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiroConsole", "..\AppFinanceiroConsole\AppFinanceiroConsole.csproj", "{1B43468A-5817-4445-9DCF-03B7D9FBA60F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaValidacoes", "..\BibliotecaValidacoes\BibliotecaValidacoes.csproj", "{50EB949A-B679-45CB-AA89-57223841ECA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppValidacoesConsole", "..\AppValidacoesConsole\AppValidacoesConsole.csproj", "{4B09E65D-E22E-4D7F-BB37-E71444FA9ED9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80D8944C-BFDA-4506-9697-B09F5A5F37EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80D8944C-BFDA-4506-9697-B09F5A5F37EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80D8944C-BFDA-4506-9697-B09F5A5F37EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80D8944C-BFDA-4506-9697-B09F5A5F37EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5628452A-6CA3-2AE0-6411-828E02CA55CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5628452A-6CA3-2AE0-6411-828E02CA55CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5628452A-6CA3-2AE0-6411-828E02CA55CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5628452A-6CA3-2AE0-6411-828E02CA55CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39078F01-2E49-463C-8436-3A833424D5C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39078F01-2E49-463C-8436-3A833424D5C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39078F01-2E49-463C-8436-3A833424D5C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39078F01-2E49-463C-8436-3A833424D5C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B43468A-5817-4445-9DCF-03B7D9FBA60F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B43468A-5817-4445-9DCF-03B7D9FBA60F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B43468A-5817-4445-9DCF-03B7D9FBA60F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B43468A-5817-4445-9DCF-03B7D9FBA60F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50EB949A-B679-45CB-AA89-57223841ECA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50EB949A-B679-45CB-AA89-57223841ECA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50EB949A-B679-45CB-AA89-57223841ECA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50EB949A-B679-45CB-AA89-57223841ECA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B09E65D-E22E-4D7F-BB37-E71444FA9ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B09E65D-E22E-4D7F-BB37-E71444FA9ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B09E65D-E22E-4D7F-BB37-E71444FA9ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B09E65D-E22E-4D7F-BB37-E71444FA9ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E17390C3-4188-4376-9187-40A15431F332}
+	EndGlobalSection
+EndGlobal

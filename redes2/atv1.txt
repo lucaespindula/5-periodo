@@ -1,0 +1,57 @@
+1- ip: 192.168.0.25
+mascara /24  (255.255.255.0)
+nome eth0
+
+2- 192.168.0.1
+eth0
+
+3- ~1.3 ms (gateway) / ~13 ms (internet)
+nenhuma (0%) em todos os testes
+
+
+4- Hosts ativos: 4 
+192.168.0.1
+
+5- Portas abertas:  22, 80, 443
+Porta 22  → SSH (acesso remoto seguro)
+Porta 80  → HTTP (servidor web)
+Porta 443 → HTTPS (servidor web com SSL)
+
+6- Apache httpd
+OpenSSH 8.2p1 / Apache 2.4.51
+
+7-Linux (kernel 5.4)
+
+8- sim 22, 80
+serviços
+Porta 22  → SSH
+Porta 80  → HTTP (servidor web local)
+Porta 68  → DHCP client
+
+9- 3 dispositivos
+aa:bb:cc:11:22:33  (192.168.0.1)
+
+10- 4 hops
+192.168.0.1  roteador local
+
+11- 8 (4 request, 4 reply)
+sim 172.217.29.14
+
+12- 93.184.216.34
+
+13- 8
+172.217.29.14
+
+14- Linux (kernel 5.4)
+3  (22, 80, 443)
+
+15- 4
+80 (HTTP) 3 dispositivos
+
+desafio: 65535: 5 portas
+
+ IP             Sistema             Portas abertas       
+ 192.168.0.1    RouterOS / Linux    80, 443              
+ 192.168.0.10   Linux 5.x           22, 80, 443          
+ 192.168.0.25   Linux 5.x (Kali)    22                   
+ 192.168.0.30   Windows 10          80, 8080, 139, 445

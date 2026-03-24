@@ -1,0 +1,36 @@
+0- a) a soma deve retornar 5, não 4, corrigido: 
+[Fact]
+public void Somar_DeveRetornar5()
+{
+ var calc = new Calculadora();
+ var resultado = calc.Somar(2, 3);
+ Assert.Equal(4, resultado);
+}
+
+b) dividir por 0 deve lançar uma exceção, mas está dividindo por 2, corrigido:
+[Fact]
+public void Dividir_DeveLancarExcecao()
+{
+ var calc = new Calculadora();
+ Assert.Throws<DivideByZeroException>(() => calc.Dividir(10,
+0));
+}
+
+c)carrinho deve estar vazio, mas ele está com um produto, corrigido:
+[Fact]
+public void Carrinho_DeveEstarVazio()
+{
+ var carrinho = new Carrinho();
+ Assert.Equal(0, carrinho.Quantidade());
+}
+
+d)31 de imc não deve retornar peso normal, e sim obesidade:
+[Fact]
+public void Classificar_DeveRetornarPesoNormal()
+{
+ var calc = new CalculadoraIMC();
+ var resultado = calc.Classificar(31);
+ Assert.Equal("obesidade", resultado);
+}
+
+

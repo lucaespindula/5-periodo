@@ -1,0 +1,26 @@
+1- 	1. porta 80
+	2. http
+	3. Apache httpd 2.4.5
+
+2- 	1. sim
+	2. sim
+	3. sim
+
+3-	1. sim, ex: acessp a arquivos
+	2. path traversal, remote code execution e denial of servisse
+	3. ler arquivos confidenciais, executar comandos como administrador, derrubar servidor
+
+4- 	1. sim	
+	2. não, deveria aceitar apenas endereço ip
+	3. há grandes riscos, como ver usuários, colocar malware, e destruir o servidor
+
+exercício integrador- 	1. apache http server
+	2. apache 2.4.57
+	3. sim, ler arquivos, acessar arquivos, métodos http
+	4. sim
+	5. execução de comandos, acessso ao banco de dados, leitura de arquivos do so, controle do servidor
+
+exercício integrador- 1. command injection, sql injection, file inclusion
+	2. o sistema pega o que o usuário digitou e usa diretamente, sem validar, no command injection a entrada vai pro terminal do servidor, no sql injection vai direto pra consulta do banco, no file inclusion vai direto pro caminho de arquivo carregado pelo sistema.
+	3. command injection permite executar qualquer comando no servidor, podendo destruir arquivos ou instalar malware. SQL injection permite acessar, vazar ou apagar todos os dados do banco. file inclusion permite ler arquivos internos do servidor como senhas e chaves de acesso, em todos os casos o impacto pode ser controle total do sistema.
+	4. validando sempre a entrada do usuário antes de usar, no command injection usando escapeshellarg(), no sql injection usando prepared statementsc no file inclusion usando lista branca com apenas os arquivos permitidos.

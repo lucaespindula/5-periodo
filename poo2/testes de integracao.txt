@@ -1,0 +1,32 @@
+1- sao testes que verificam se pares do sistema estao funcionando em conjuntos
+2- teste unitario vai testar uma parte isolada, teste de integração vai verificar a comunicação entre partes do sistema
+3-nao, podem ser testados manuais, porem automatizar é mais comum e eficaz
+4- porque alguns erros so ocorrem com uma sequencia de eventos ou na comunicação entre sistemas
+5- perca de dados durante a comunicação entre modulos, falhas na transmissao etc, e resultados divergentes, que sao quandos os dados sao divergentes dos esperados, por formulas ou calculos incorretos por exemplo.
+6- identificar módulos
+definir cenários
+criar casos de teste
+executar testes
+validar resultados
+documentar
+7- vertical seria verificar a integração entre camadas e vertical entre modulos de um sistema
+8- vertical, pois é entre camadas de um sistema
+9- ela verifica se as classes/componentes que implementam uma interface respeitam o contrato definido, se realmente utilizam o modulo da maneira correta
+10- porque integração lida com componentes reais, entre modulos e sistemas
+11- horizontal, seria integração de sistemas se utilizasse um sistema externo para pagamentos por exemplo
+12- integração de sistemas
+13- garante que mudanças em um codigo ja implementado nao va comprometer funcionalidades existentes
+14- integração de interfaces, pois valida se implementa corretamente o contrato definido na interface
+15- porque sao lentos e complexos
+16- falhas entre modulos e sistemas
+17- serviços fazem parte de um sistema, e sistemas podem incluir integrações alem de serviços
+18- integração vertical (entre camadas) e integração de sistemas (api de pagamento)
+19- mockadas sao simuladas, utilizadas em testes unitarios.
+reais sao testes com componentes reais utilizadas em integração.
+os testes de integração são mais efetivos, porem sao mais lentos.
+20- execução mais rapida, maior precisão, facilidade de repetição.
+21- não é o ideal, pois nao verificam erros unitarios e todos os cenarios possiveis
+22- sim, pois pode haver falha entre os sistemas, integração feita da maneira incorreta, api fora do ar...
+23- uma arquitetura bem definida auxilia nos testes e identificação de erros, isolando por partes
+24- não, pois nao verificam erros pequenos dentro de um modulo por exemplo, eles se complementam
+25- ha muitas dependencias, como api, rede, banco, o maior desafio e manter estavel.

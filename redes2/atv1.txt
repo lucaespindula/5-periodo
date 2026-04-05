@@ -13,9 +13,9 @@ nenhuma (0%) em todos os testes
 192.168.0.1
 
 5- Portas abertas:  22, 80, 443
-Porta 22  → SSH (acesso remoto seguro)
-Porta 80  → HTTP (servidor web)
-Porta 443 → HTTPS (servidor web com SSL)
+Porta 22  SSH 
+Porta 80  HTTP 
+Porta 443 HTTPS
 
 6- Apache httpd
 OpenSSH 8.2p1 / Apache 2.4.51
@@ -24,9 +24,9 @@ OpenSSH 8.2p1 / Apache 2.4.51
 
 8- sim 22, 80
 serviços
-Porta 22  → SSH
-Porta 80  → HTTP (servidor web local)
-Porta 68  → DHCP client
+Porta 22 SSH
+Porta 80 HTTP (servidor web local)
+Porta 68 DHCP client
 
 9- 3 dispositivos
 aa:bb:cc:11:22:33  (192.168.0.1)

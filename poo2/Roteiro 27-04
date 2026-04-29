@@ -1,0 +1,141 @@
+1- public decimal Depositar(decimal valor)
+{
+    if (valor <= 0)
+        throw new ArgumentException("Valor do depósito deve ser positivo");
+
+    if (valor > 10000)
+        throw new ArgumentOutOfRangeException(nameof(valor), "Valor do depósito não pode ser maior que 10.000");
+
+    Saldo += valor;
+    return Saldo;
+}
+
+2- using System;
+
+[Serializable]
+public class LimiteDiarioException : Exception
+{
+    public decimal Valor { get; }
+
+    public LimiteDiarioException() { }
+
+    public LimiteDiarioException(string message)
+        : base(message) { }
+
+    public LimiteDiarioException(string message, Exception inner)
+        : base(message, inner) { }
+
+    public LimiteDiarioException(decimal valor)
+        : base($"Saque de {valor} excede o limite por operação de 500")
+    {
+        Valor = valor;
+    }
+}
+
+public decimal Sacar(decimal valor)
+{
+    if (valor <= 0)
+        throw new ArgumentException("Valor do saque deve ser positivo");
+
+    if (valor > 500)
+        throw new LimiteDiarioException(valor);
+
+    try
+    {
+        if (Saldo < valor)
+            throw new Exception("Saldo insuficiente (erro interno)");
+
+        Saldo -= valor;
+        return Saldo;
+    }
+    catch (Exception ex)
+    {
+        throw new SaldoInsuficienteException(valor, Saldo, ex);
+    }
+}
+
+3- public void Transferir(Conta destino, decimal valor)
+{
+    if (destino == null)
+        throw new ArgumentException("Conta de destino inválida");
+
+    if (valor <= 0)
+        throw new ArgumentException("Valor deve ser positivo");
+
+    // garante consistência: só deposita se sacar funcionar
+    this.Sacar(valor);
+    destino.Depositar(valor);
+}
+
+4- catch (Exception ex)
+{
+    Console.WriteLine("Message: " + ex.Message);
+    Console.WriteLine("StackTrace: " + ex.StackTrace);
+
+    if (ex.InnerException != null)
+        Console.WriteLine("InnerException: " + ex.InnerException.Message);
+}
+
+5- catch (Exception)
+{
+    throw;
+}
+
+mantem a origem real do erro
+
+6- try
+{
+    Console.Write("Digite um valor: ");
+    decimal valor = decimal.Parse(Console.ReadLine());
+
+    Console.WriteLine("Valor digitado: " + valor);
+}
+catch (FormatException)
+{
+    Console.WriteLine("Entrada inválida! Digite um número válido.");
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Erro inesperado: " + ex.Message);
+}
+
+7- 1. permite tratar regras especificas, auxilia nas boas praticas 
+2. guardar o erro original e manter a causa raiz
+3. main
+
+8- [Serializable]
+public class LimiteDiarioAcumuladoException : Exception
+{
+    public LimiteDiarioAcumuladoException(string message)
+        : base(message) { }
+}
+
+private decimal totalSacadoHoje = 0;
+private const decimal LIMITE_DIARIO = 1000;
+
+public decimal Sacar(decimal valor)
+{
+    if (valor <= 0)
+        throw new ArgumentException("Valor do saque deve ser positivo");
+
+    if (valor > 500)
+        throw new LimiteDiarioException(valor);
+
+    if (totalSacadoHoje + valor > LIMITE_DIARIO)
+        throw new LimiteDiarioAcumuladoException("Limite diário de saque excedido");
+
+    try
+    {
+        if (Saldo < valor)
+            throw new Exception("Saldo insuficiente (erro interno)");
+
+        Saldo -= valor;
+        totalSacadoHoje += valor;
+
+        return Saldo;
+    }
+    catch (Exception ex)
+    {
+        throw new SaldoInsuficienteException(valor, Saldo, ex);
+    }
+}
